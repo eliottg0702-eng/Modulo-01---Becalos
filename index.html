@@ -1,76 +1,170 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Eliot Tenorio</title>
-    </head>
-    <body>
-        <header>
-            <section class="name-Eliot">
-                <h1>Jose Eliot Tenorio Gutierrez</h1>
-                <p>Ingeniero en Comunicaciones y Electronica</p>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eliot Tenorio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        header {
+            background-color: #ff00b7;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: #ecf0f1;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 800px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        form input, form textarea, form button {
+            margin-top: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #2c3e50;
+            color: white;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        form button:hover {
+            background-color: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://i.pinimg.com/236x/50/0f/f7/500ff7ad35852cc81f314599d8f8d790.jpg" alt="Foto de Eliot">
+        <section class="name-Eliot">
+            <h1>Jose Eliot Tenorio Gutierrez</h1>
+            <p>Ingeniero en Comunicaciones y Electrónica</p>
+        </section>
+
+        <nav>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#educacion">Educación</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact-me">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre-mi">
+            <h2><center>Acerca de mí</center></h2>
+            <p>
+                Integrarme a un equipo de trabajo innovador que
+                fomente mi crecimiento humano y profesional
+                continuo, donde mis conocimientos y experiencia
+                práctica puedan contribuir significativamente a los
+                objetivos de la empresa. Mi capacidad para la
+                actualización constante y el aprendizaje rápido me
+                permite adaptarme eficazmente a nuevos desafíos y
+                prácticas
+            </p>
+        </section>
+
+        <section id="educacion">
+            <h2><center>Educación</center></h2>
+            <ul>
+                <li><strong>Instituto Politécnico Nacional</strong></li>
+                <p>Ingeniería en Comunicaciones y Electrónica</p>
+                <li><strong>Universidad Rosario Castellanos</strong></li>
+                <p>Licenciatura en Tecnología de Información y Comunicacion</p>
+            </ul>
+        </section>
+
+        <section id="experiencia">
+            <h2><center>Experiencia</center></h2>
+            <section>
+                <h4>Auxiliar Administrativo</h4>
+                <p>2026 - Presente</p>
+                <h4>Soporte Tecnico STITA y Asesoria Operativa</h4>
+                <p>2025 - 2026</p>
+                <h4>Operador de Muelle</h4>
+                <p>2024 - 2025</p>
             </section>
+        </section>
 
-            <nav>
-                <a href="#experiencia">Experiencia</a>
-                <a href="#educacion">Educacion</a>
-                <a href="#skills">Skills</a>
-            </nav>      
-        </header>
+        <section id="skills">
+            <h2><center>Skills</center></h2>
+            <ul>
+                <li>Lenguajes de programación: HTML, JAVA SCRIPT, PYTON.</li>
+                <li>Bases de datos: EXCEL, ACCESS.</li>
+                <li>Sistemas operativos: WINDOWS.</li>
+            </ul>
+        </section>
 
-        <main>
-            <section id="sobre-mi">
-                <h2>Acerca de mi</h2>
-                <p>
-                    Hola, me llamo Jose Eliot Tenorio Gutierrez, estoy en un curso de
-                    programacion por una beca!!
-                </p>
-            </section>
+        <section id="contact-me">
+            <h2><center>Contacto</center></h2>
+            <p>Si gustas ponerte en contacto deja tus datos y me comunicare contigo a la brevedad</p>
+            <form>
+                <label for="nombre"><center>Nombre:</center></label>
+                <input type="text" id="name" name="nombre" placeholder="Escribe tu nombre" required>
 
-            <section id="educacion">
-                <h2>Educacion</h2>
+                <label for="correo"><center>Correo:</center></label>
+                <input type="email" name="correo" id="correo" placeholder="tu@example.com" required>
 
-                <ul>
-                    <li>INTITUTO POLITECNICO NACIONAL</li>
-                    <p>Ingenieria en Comunicaciones y Electronica</p>
-                    <p>2024 - 2025</p>
-                </ul>
-            </section>
+                <label for="mensaje"><center>Escribe tu mensaje:</center></label>
+                <textarea name="mensaje" id="mensaje" rows="4" placeholder="Escribe tu mensaje" required></textarea>
 
-            <section id="experiencia">
-                <h2>Experiencia</h2>
-                <section>
-                    <h4>Auxiliar Administrativo</h4>
-                    <p>2025 - Presente</p>
-                </section>
-            </section>
-
-            <section id="contact-me">
-                <H2>Contacto</H2>
-                <p>Si quieres hablarme hazlo</p>
-
-                <form>
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="name" name="nombre" placeholder="Escribe tu nombre"required>
-     
-                    <label for="correo">Correo:</label>
-                    <input type="email" name="correo" id="correo" placeholder="tu@example.com"required>
-                
-                    <label for="mensaje">Escrine tu mensaje</label>  
-                    <textarea name="mensaje" id="mensaje" rows="4" placeholder="Escribe tu mensaje" required></textarea>
-                    
-                    <button>Enviar</button>
-                
-                </form>  
-
-            </section>
-
-
-
-
-
-        </main>
-        
-    </body>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+</body>
 </html>
